@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+    <include layout="@layout/action_bar_toolbar"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp"
+                >
+
+                <EditText
+                    android:id="@+id/et_nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#000"
+                    android:hint="Nombres"
+                    android:inputType="text"
+                    android:textColor="#000"
+                    android:textColorHint="#000" />
+
+                <EditText
+                    android:id="@+id/et_apellido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#000"
+                    android:hint="Apellidos"
+                    android:inputType="text"
+                    android:textColor="#000"
+                    android:textColorHint="#000" />
+                <EditText
+                    android:id="@+id/et_telefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#000"
+                    android:hint="Telefono"
+                    android:inputType="text"
+                    android:textColor="#000"
+                    android:textColorHint="#000" />
+
+                <EditText
+                    android:id="@+id/et_correo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#000"
+                    android:hint="Comentar"
+                    android:inputType="text"
+                    android:textColor="#000"
+                    android:textColorHint="#000" />
+                <EditText
+                    android:id="@+id/et_direccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#000"
+                    android:hint="Comentar"
+                    android:inputType="text"
+                    android:textColor="#000"
+                    android:textColorHint="#000" />
+
+
+                <Button
+                    android:id="@+id/btn_insertcite"
+                    android:layout_width="270dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/btn_round"
+                    android:drawableLeft="@drawable/ic_edit"
+                    android:gravity="center"
+                    android:paddingHorizontal="25dp"
+                    android:textColor="@color/white"
+                    android:text="Modificar"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#2E5B30</color>
+    <color name="primaryDark">#013108</color>
+    <color name="primaryLight">#5A885A</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="alpha_canal_card">#53292929</color>
+
+    <style name="TimePicker" parent="android:Theme.Material.Light.Dialog">
+        <item name="android:colorAccent">@color/primaryColor</item>
+    </style>
+    <style name="date_picker" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:colorAccent">@color/primaryColor</item>
+    </style>
+
+</resources>

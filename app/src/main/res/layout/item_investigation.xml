@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="380dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:cardCornerRadius="7dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_titleinvestigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/sparta_bold"
+                    android:paddingVertical="6dp"
+                    android:text="Javascript con Fraporitmos"
+                    android:textColor="#19142B"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_descinvestigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:paddingVertical="6dp"
+                    android:text="Buenas practicas de Javascript 2021"
+                    android:textColor="#19142B"
+                    android:textSize="12dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:drawableTint="#000"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:clickable="true"
+                                android:drawableLeft="@drawable/ic_person"
+                                android:drawablePadding="5dp"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:gravity="center"
+                                android:text="Investigador: "
+                                android:textColor="#000"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_personinvestigation"
+                                android:layout_width="wrap_content"
+                                android:clickable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:padding="5dp"
+                                android:text="Richard Francisco Espino Mostacero"
+                                android:textColor="#000"
+                                android:textSize="10dp" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:drawableTint="#000"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:clickable="true"
+                                android:drawableLeft="@drawable/ic_chart"
+                                android:drawablePadding="5dp"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:gravity="center"
+                                android:text="Estado: "
+                                android:textColor="#000"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_stateinvestigation"
+                                android:layout_width="wrap_content"
+                                android:clickable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:padding="5dp"
+                                android:text="Por revisar"
+                                android:textColor="#000"
+                                android:textSize="10dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        >
+                        <Button
+                            android:id="@+id/btn_getCurrentId"
+                            android:drawableLeft="@drawable/ic_eye"
+                            android:paddingHorizontal="15dp"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:text="Ver "
+                            android:textColor="@color/white"
+                            android:background="@drawable/btn_round"
+                            android:textSize="8dp"
+                            android:clickable="true" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

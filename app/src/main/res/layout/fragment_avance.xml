@@ -1,0 +1,362 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FCFFFC"
+    android:layout_marginBottom="50dp"
+    tools:context=".fragments.AvanceFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:id="@+id/container_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="60dp"
+                    android:fontFamily="@font/sparta_bold"
+                    android:padding="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="Investigaciones en revisión 📖: "
+                    android:textColor="#19142B"
+                    android:textSize="18dp" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_investigations"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ly_containerinvestigador"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/tv_titile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:paddingLeft="20dp"
+
+                    android:text="Datos de mi asesor "
+                    android:textColor="#19142B"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:padding="20dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/view2"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true"
+                            android:elevation="12dp"
+                            app:cardCornerRadius="40dp">
+
+                            <ImageView
+                                android:id="@+id/iv_asesor"
+                                android:layout_width="match_parent"
+                                android:layout_height="90dp"
+                                android:scaleType="centerCrop"
+                                />
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_nombreasesor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="30dp"
+                                android:fontFamily="@font/sparta_bold"
+                                android:padding="5dp"
+                                android:text="Name Asesor Complete"
+                                android:textColor="#19142B"
+                                android:textSize="13dp" />
+
+                            <TextView
+                                android:id="@+id/tv_emailasesor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="30dp"
+                                android:padding="5dp"
+                                android:text="Correo@outlook.com"
+                                android:textColor="#19142B"
+                                android:textSize="10dp" />
+
+                            <TextView
+                                android:id="@+id/tv_profesionasesor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="30dp"
+                                android:fontFamily="@font/sparta_bold"
+                                android:padding="5dp"
+                                android:text="Ing Informático"
+                                android:textColor="#19142B"
+                                android:textSize="10dp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:id="@+id/Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+                            android:text="Tu investigación"
+                            android:textColor="#19142B"
+                            android:textSize="18dp" />
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_investigacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+
+                        app:cardCornerRadius="30dp"
+                        app:cardElevation="10dp">
+
+                        <ImageView
+                            android:id="@+id/photo_driver_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/background" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:background="@color/alpha_canal_card"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="10dp">
+
+                            <TextView
+                                android:id="@+id/tv_titulo_proyecto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="5dp"
+                                android:text="Titulo Project"
+                                android:textColor="@color/white"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="30dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_descripcion"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="5dp"
+
+                                    android:layout_marginBottom="10dp"
+                                    android:text="Description of content investigation "
+                                    android:textColor="@color/white"
+                                    android:textSize="13dp" />
+
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/fecha_inicio"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="Fecha de creacion: 12/11/21"
+                                android:textColor="@color/white"
+                                android:textSize="13dp"
+
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:padding="5dp"
+                                android:text="Progreso: "
+
+                                android:textColor="#19142B"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_avance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:textSize="16dp"
+                                android:padding="5dp"
+                                android:text="0%"
+                                android:textColor="#19142B"
+                                />
+                        </LinearLayout>
+
+                        <ProgressBar
+                            android:id="@+id/avance_proyecto"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:padding="9dp"
+                            android:progressDrawable="@drawable/custom_progress" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:padding="5dp"
+                                android:text="Estado: "
+                                android:textColor="#19142B"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_estadp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:padding="5dp"
+                                android:text=""
+                                android:textColor="#19142B"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_dowloandpdf"
+                            android:layout_width="250dp"
+                            android:layout_height="match_parent"
+
+                            android:background="@drawable/btn_round"
+                            android:drawableLeft="@drawable/ic_downloand"
+                            android:gravity="center"
+                            android:paddingHorizontal="25dp"
+                            android:text="Descargar"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                        <Button
+                            android:id="@+id/btn_updatepdf"
+                            android:layout_width="250dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="30dp"
+                            android:background="@drawable/btn_round"
+                            android:drawableLeft="@drawable/ic_update"
+                            android:gravity="center"
+                            android:paddingHorizontal="25dp"
+                            android:text="Actualizar"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

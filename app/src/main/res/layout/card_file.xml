@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="20dp"
+    android:layout_marginTop="25dp"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    cardView:cardCornerRadius="3dp">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/photo_driver_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/background"
+            android:scaleType="centerCrop"
+            />
+        <LinearLayout
+            android:background="@color/alpha_canal_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_gravity="bottom"
+            android:paddingHorizontal="10dp"
+            >
+
+            <TextView
+                android:id="@+id/username_driver_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Referenciar cap 11.5"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginRight="30dp"
+                >
+                <TextView
+                    android:id="@+id/valoration_driver_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Falta la referncia y además debe estar en formato APA 2020. Además deberías de seguir el formato. "
+
+                    android:textSize="13dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="10dp"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/valoration_driver_card"
+                    android:gravity="center"
+                    >
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="host" templateMergeStrategy="preserve" translatable="false">http://3.140.135.200:8080</string>
+
+
+</resources>

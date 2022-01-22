@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.37447916666666664" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/btn_comment.xml" value="0.3046875" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/btn_round.xml" value="0.37395833333333334" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/card_folder.xml" value="0.37395833333333334" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/custom_progress.xml" value="0.37395833333333334" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/ic_calendar.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/ic_comment.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/ic_fecha.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/ic_file.xml" value="0.37395833333333334" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/ic_fileman.xml" value="0.37395833333333334" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/ic_folder.xml" value="0.37395833333333334" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/ic_home.xml" value="0.37447916666666664" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/ic_home_black.xml" value="0.37447916666666664" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/ic_icon_folder.xml" value="0.37447916666666664" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/ic_launcher_background.xml" value="0.37447916666666664" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/ic_lector.xml" value="0.37447916666666664" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/ic_phone.xml" value="0.37447916666666664" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/ic_reloj.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/ic_send.xml" value="0.37447916666666664" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/ic_user.xml" value="0.37395833333333334" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/ic_userfile.xml" value="0.37395833333333334" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/ic_usermenu.xml" value="0.37395833333333334" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/ic_wave.xml" value="0.37395833333333334" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/ic_welcome.xml" value="0.37447916666666664" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/logooficial.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/drawable/progress_animation.xml" value="0.246875" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/action_bar_toolbar.xml" value="0.3625" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/activity_cita.xml" value="0.264" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/activity_citas.xml" value="0.264" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/activity_citas2.xml" value="0.35833333333333334" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/activity_editprofile.xml" value="0.3378623188405797" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/activity_file_investigator.xml" value="0.25" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/activity_file_update.xml" value="0.334375" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/activity_filecontent.xml" value="0.264" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/activity_fileinvestigator.xml" value="0.1" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/activity_login.xml" value="0.3572916666666667" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/activity_menu.xml" value="0.31875" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/activity_profile.xml" value="0.3315068493150685" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/activity_progress.xml" value="0.33" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/activity_prueba.xml" value="0.35052083333333334" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/activity_splash_screen.xml" value="0.3572916666666667" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/activity_splashscreen.xml" value="0.32065217391304346" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/card_file.xml" value="0.3578125" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/content_login.xml" value="0.3416666666666667" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/fragment_avance.xml" value="0.1588249343205159" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/fragment_first.xml" value="0.32065217391304346" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/fragment_perfil.xml" value="0.21" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/fragment_second.xml" value="0.32065217391304346" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/item_cita.xml" value="0.33" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/item_comentario.xml" value="0.3375" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/item_investigation.xml" value="0.30666666666666664" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/layout/login_activity.xml" value="0.4" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/menu/menu.xml" value="0.3625" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/menu/menu_context.xml" value="0.3625" />
+        <entry key="..\:/Users/Frapo/AndroidStudioProjects/ParqueCientificoUNCP/app/src/main/res/menu/nav_menu.xml" value="0.3625" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_send.xml" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
