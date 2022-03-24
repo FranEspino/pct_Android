@@ -30,7 +30,10 @@ data class Persona(
 
 data class Rol(
     val tipo: String,
-    var id_rol: Int
+    var id_rol: Int,
+
+
+val cambiar_clave: Int
 )
 
 data class InvestigacionResponse(
@@ -83,5 +86,20 @@ data class Cite(
 
 
 data class ResponseUpdatePdf(
+    val msg: String
+)
+
+data class UpdateFoto(
+    val foto: Foto,
+    val id_persona: Int
+)
+
+data class Foto(
+    val archivo: String,
+    val extencion: String
+)
+
+data class ResponseFoto(
+    val foto: String,
     val msg: String
 )

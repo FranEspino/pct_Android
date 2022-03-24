@@ -105,10 +105,12 @@ class CitaActivity : AppCompatActivity() , DatePickerDialog.OnDateSetListener, T
             }
         })
     }
+
     private fun getDateCalendar(){
         val cal: Calendar = Calendar.getInstance()
         dia = cal.get(Calendar.DAY_OF_MONTH)
-        mes = cal.get(Calendar.MONTH)
+        mes = cal[Calendar.MONTH]
+
         anio = cal.get(Calendar.YEAR)
     }
 
@@ -132,10 +134,10 @@ class CitaActivity : AppCompatActivity() , DatePickerDialog.OnDateSetListener, T
 
 
     }
-    override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
-        guardarDia = dayOfMonth
-        guardarMes =month
-        guardaranio = year
+    override fun onDateSet(view: DatePicker?, anio: Int, mes: Int, dia: Int) {
+        guardarDia = dia
+        guardarMes =mes +1
+        guardaranio = anio
         getDateCalendar()
         et_date.setText("$guardarDia/$guardarMes/$guardaranio")
     }
@@ -146,4 +148,5 @@ class CitaActivity : AppCompatActivity() , DatePickerDialog.OnDateSetListener, T
         getDateTimer()
         et_time.setText("$guardarHora:$guardarMinutos")
     }
+
 }

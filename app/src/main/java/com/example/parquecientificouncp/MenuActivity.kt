@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 
 import androidx.core.content.ContextCompat
 
@@ -14,6 +15,7 @@ import com.example.parquecientificouncp.components.MyToolbar
 import com.example.parquecientificouncp.fragments.AvanceFragment
 import com.example.parquecientificouncp.fragments.HomeFragment
 import com.example.parquecientificouncp.fragments.PerfilFragment
+import com.example.parquecientificouncp.models.ChangePass
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
@@ -30,6 +32,10 @@ class MenuActivity : AppCompatActivity() {
         val perfilFragment = PerfilFragment()
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
         makeCurrentFragment(homeFragment)
+
+
+
+
         bottomNav.setOnNavigationItemSelectedListener { item ->
             when(item.itemId){
                 R.id.ic_home -> makeCurrentFragment(homeFragment)

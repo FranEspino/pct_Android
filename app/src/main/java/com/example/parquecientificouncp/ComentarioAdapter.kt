@@ -22,7 +22,6 @@ class ComentarioAdapter(val Cometario: ArrayList<Comentarios>): RecyclerView.Ada
     }
 
     override fun getItemCount(): Int = Cometario.size
-
     class  ComentariosHolder(val view: View):RecyclerView.ViewHolder(view) {
 
         fun render(comentarios: Comentarios){
@@ -31,4 +30,5 @@ class ComentarioAdapter(val Cometario: ArrayList<Comentarios>): RecyclerView.Ada
             Picasso.get().load(comentarios.foto).into(view.findViewById<ImageView>(R.id.iv_investigador))
         }
     }
+
 }

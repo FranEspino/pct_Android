@@ -37,7 +37,6 @@ class AvanceFragment : Fragment() {
         val ly_containerinvestigador: LinearLayout = view.findViewById(R.id.ly_containerinvestigador)
         val container_rv: LinearLayout = view.findViewById(R.id.container_rv)
         val typeuser  = UserContextApplication.context.getTypeUser()
-
         if(typeuser == "investigador"){
             container_rv.visibility= View.GONE
             getInformationMatchUser(id_rol, view)
@@ -46,6 +45,7 @@ class AvanceFragment : Fragment() {
         if(typeuser == "asesor"){
             ly_containerinvestigador.visibility= View.GONE
             getInvestigationsAsesor(UserContextApplication.context.getIdRol(),view)
+
         }
 
         return view
@@ -86,7 +86,7 @@ class AvanceFragment : Fragment() {
                             UserContextApplication.context.setIdItemInvestigator(item.id_rol)
                             UserContextApplication.context.setUtlItemInvestigation(item.url)
 
-                            getInfoInvestigation(item.id)
+                            getInfoInvestigation(  UserContextApplication.context.getIdItemInvestigator())
 
                         }
                     })
@@ -144,26 +144,14 @@ class AvanceFragment : Fragment() {
             ) {
                 val res = response.body()
                 if (res != null) {
-                    val base_url: String = getString(R.string.host)
 
                     val tv_titulo_proyecto: TextView = view.findViewById(R.id.tv_titulo_proyecto)
                     tv_titulo_proyecto.setText(response.body()!!.investigacion[0].titulo)
 
                     val tv_nombreasesor: TextView = view.findViewById(R.id.tv_nombreasesor)
                     tv_nombreasesor.setText(response.body()!!.investigacion[0].nombre + "\n" + response.body()!!.investigacion[0].apellido )
-                    val tv_fecha : TextView = view.findViewById(R.id.fecha_inicio)
-                    val input = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
-                    val output = SimpleDateFormat("dd/MM/yyyy")
 
-                    var d: Date? = null
-                    try {
-                        d = input.parse(response.body()!!.investigacion[0].fecha_inicio)
-                    } catch (e: ParseException) {
-                        e.printStackTrace()
-                    }
-                    val formatted = output.format(d)
 
-                    tv_fecha.setText("Fecha de creación: "+formatted )
 
                     val tv_emailasesor : TextView = view.findViewById(R.id.tv_emailasesor)
                     tv_emailasesor.setText(response.body()!!.investigacion[0].correo)
@@ -182,8 +170,16 @@ class AvanceFragment : Fragment() {
                     val tv_descripcion : TextView = view.findViewById(R.id.tv_descripcion)
                     tv_descripcion.setText(response.body()!!.investigacion[0].descripcion)
 
+                    val tv_fechainicio : TextView = view.findViewById(R.id.fecha_inicio)
+                    tv_fechainicio.setText("Fecha de creación: "+response.body()!!.investigacion[0].fecha_inicio)
                     val iv_asesor : ImageView= view.findViewById(R.id.iv_asesor)
-                    Picasso.get().load(base_url+"/images/"+response.body()!!.investigacion[0].foto).into(iv_asesor);
+                    Picasso
+                        .get()
+                        .load("https://parquecientificouncp.com/archivo/usuario/"+response.body()!!.investigacion[0].foto)
+                        .fit()
+                        .centerInside()
+                        .placeholder(R.drawable.progress_animation)
+                        .into(iv_asesor)
 
                     val cv_investigacion : CardView = view.findViewById(R.id.cv_investigacion)
 
@@ -195,14 +191,20 @@ class AvanceFragment : Fragment() {
 
                     val btn_dowloandpdf: Button = view.findViewById(R.id.btn_dowloandpdf)
                     btn_dowloandpdf.setOnClickListener{
-                        var request :DownloadManager.Request = DownloadManager.Request(
-                            Uri.parse(base_url+"/api/file/documents/"+response.body()!!.investigacion[0].url_archivo))
-                            .setTitle(response.body()!!.investigacion[0].titulo)
-                            .setDescription(response.body()!!.investigacion[0].descripcion)
-                            .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                            .setAllowedOverMetered(true)
-                        var dm : DownloadManager = activity!!.baseContext.getSystemService(DOWNLOAD_SERVICE) as DownloadManager
-                        dm.enqueue(request)
+                        if(response.body()!!.investigacion[0].url_archivo.isEmpty()){
+                            Toast.makeText(getActivity(),"Todavia no has iniciado tu investigación.", Toast.LENGTH_LONG).show()
+                        }else{
+                            Log.d("URL PARA DESCARGAR","https://parquecientificouncp.com/archivo/proyecto/"+response.body()!!.investigacion[0].url_archivo+".pdf" )
+                            var request :DownloadManager.Request = DownloadManager.Request(
+                                Uri.parse("https://parquecientificouncp.com/archivo/proyecto/"+response.body()!!.investigacion[0].url_archivo+".pdf")  )
+                                .setTitle(response.body()!!.investigacion[0].titulo)
+                                .setDescription(response.body()!!.investigacion[0].descripcion)
+                                .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
+                                .setAllowedOverMetered(true)
+                            var dm : DownloadManager = activity!!.baseContext.getSystemService(DOWNLOAD_SERVICE) as DownloadManager
+                            dm.enqueue(request)
+                        }
+
                     }
 
                     val btn_updatepdf: Button = view.findViewById(R.id.btn_updatepdf)

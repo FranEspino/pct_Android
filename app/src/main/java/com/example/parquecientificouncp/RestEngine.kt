@@ -9,7 +9,7 @@ class RestEngine {
     companion object ServiceBuilder {
         private val client = OkHttpClient.Builder().build()
         private val retrofit = Retrofit.Builder()
-            .baseUrl("http://3.140.135.200:8080/api/")
+            .baseUrl("https://parquecientificouncp.com/api/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()

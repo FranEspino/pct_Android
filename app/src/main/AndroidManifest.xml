@@ -18,11 +18,22 @@
         android:usesCleartextTraffic="true"
         android:windowSoftInputMode="adjustPan|adjustResize">
         <activity
-            android:name=".FileInvestigatorActivity"
-            android:parentActivityName=".MenuActivity"
+            android:name=".UpdatefotoActivity"
+            android:parentActivityName=".ProfileActivity"
 
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:exported="false" />
+
+        <activity
+            android:name=".PasswordActivity"
+            android:exported="false"
+            android:parentActivityName=".ProfileActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".FileInvestigatorActivity"
+            android:exported="false"
+            android:parentActivityName=".MenuActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".ProgressActivity"
             android:exported="false"

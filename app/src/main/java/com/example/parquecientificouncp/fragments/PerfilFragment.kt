@@ -8,10 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import com.example.parquecientificouncp.FilecontentActivity
-import com.example.parquecientificouncp.ProfileActivity
-import com.example.parquecientificouncp.R
-import com.example.parquecientificouncp.UserContextApplication
+import com.example.parquecientificouncp.*
 import com.squareup.picasso.Picasso
 
 class PerfilFragment : Fragment() {
@@ -31,8 +28,14 @@ class PerfilFragment : Fragment() {
             startActivity(intent)
         }
         val iv_investigador: ImageView = view.findViewById(R.id.iv_user)
+
         Picasso.get().load(UserContextApplication.context.getFotoUser()).into(iv_investigador);
         name_user.setText(UserContextApplication.context.getNameUser() + "\n" + UserContextApplication.context.getLastNameUser())
+
+        iv_investigador.setOnClickListener {
+            val intent = Intent(activity, UpdatefotoActivity::class.java)
+            startActivity(intent)
+        }
         tv_phone.setText(UserContextApplication.context.getPhoneUser())
         tv_email.setText(UserContextApplication.context.getEmailUser())
         tv_addres.setText(UserContextApplication.context.getAddressUser())

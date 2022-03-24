@@ -34,7 +34,6 @@ class CitasActivity : AppCompatActivity() {
         val typeUser = UserContextApplication.context.getTypeUser()
 
         if(typeUser == "asesor"){
-            Log.d("€€€€€€€IDDDD",UserContextApplication.context.getIdItemInvestigation().toString())
             getCitas(UserContextApplication.context.getIdItemInvestigation())
 
         }

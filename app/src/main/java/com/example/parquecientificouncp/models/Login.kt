@@ -22,6 +22,12 @@ data class Cite(
     val link: String
 )
 
+
+
+data class ChangePass(
+    val id_persona: Int,
+    val nueva_clave: String
+)
 data class ModifyInfo(
     val id_persona: Int,
     val nombre: String,

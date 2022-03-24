@@ -50,7 +50,6 @@ public class PruebaActivity extends AppCompatActivity {
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                Log.d("-----------TESTTTTTT", response.toString());
               if(response.isSuccessful()){
                   Toast.makeText(PruebaActivity.this, "Archivo Actualizado Correctamente", Toast.LENGTH_LONG).show();
                   Intent intent =  new Intent(PruebaActivity.this, MenuActivity.class);

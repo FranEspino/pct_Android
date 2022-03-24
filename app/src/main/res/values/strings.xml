@@ -12,5 +12,6 @@
     <string name="text_splah_screen">Parque Científico Tecnológico</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="baseurlfoto">https://parquecientificouncp.com/archivo/usuario/</string>
 
 </resources>

@@ -7,12 +7,15 @@ import android.os.Bundle
 import android.text.method.LinkMovementMethod
 import android.text.util.Linkify
 import android.util.Log
+import android.view.View
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.example.parquecientificouncp.entities.LoginResponse
+import com.example.parquecientificouncp.models.ChangePass
 import com.example.parquecientificouncp.models.Login
 import retrofit2.Call
 import retrofit2.Callback
@@ -26,6 +29,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_activity)
         window.statusBarColor = ContextCompat.getColor(this, R.color.primaryDark)
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         val dniUser= findViewById<EditText>(R.id.dni_user)
         val claveUser= findViewById<EditText>(R.id.clave_user)
         val btn_login = findViewById<Button>(R.id.btn_login)
@@ -33,7 +37,7 @@ class LoginActivity : AppCompatActivity() {
         val link_portal = findViewById<TextView>(R.id.tv_linkportal)
         link_portal.setOnClickListener{
             val i =  Intent(Intent.ACTION_VIEW);
-            i.setData(Uri.parse("http://3.140.135.200/portalpct/"));
+            i.setData(Uri.parse("https://parquecientificouncp.com"));
             startActivity(i);
 
         }
@@ -44,8 +48,9 @@ class LoginActivity : AppCompatActivity() {
         btn_login.setOnClickListener {
             val dni = dniUser.text.toString().trim()
             val clave = claveUser.text.toString().trim()
+            UserContextApplication.context.setCurrentPass(clave)
             if(dni.isEmpty()){
-                dniUser.error = "El email es obligatorio."
+                dniUser.error = "El dni es obligatorio."
                 dniUser.requestFocus()
                 return@setOnClickListener
             }
@@ -70,8 +75,7 @@ class LoginActivity : AppCompatActivity() {
                 }
                 override fun onResponse( call: Call<LoginResponse>, response: Response<LoginResponse>) {
                     val res = response.body()
-                    if (res != null) {
-                        val base_url: String = getString(R.string.host)
+                    if (res?.persona != null) {
                         UserContextApplication.context.setLogin(true)
                         UserContextApplication.context.setIdRol(res.rol.id_rol)
                         UserContextApplication.context.setIdPersona(res.persona[0].id_persona)
@@ -81,12 +85,13 @@ class LoginActivity : AppCompatActivity() {
                         if(res.persona[0].foto === null){
                             UserContextApplication.context.setFotoUser("https://res.cloudinary.com/frapoteam/image/upload/v1642693382/user_di2fri.png")
                         }else{
-                            UserContextApplication.context.setFotoUser(base_url+"/images/"+res.persona[0].foto)
+                            UserContextApplication.context.setFotoUser("https://parquecientificouncp.com/archivo/usuario/"+res.persona[0].foto)
 
                         }
                         UserContextApplication.context.setPhoneUser(res.persona[0].telefono)
                         UserContextApplication.context.setEmailUser(res.persona[0].correo)
                         UserContextApplication.context.setAddressUser(res.persona[0].direccion)
+                        UserContextApplication.context.setChangePass(res.rol.cambiar_clave)
 
                         val intent = Intent(applicationContext, MenuActivity::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -102,6 +107,9 @@ class LoginActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         if(UserContextApplication.context.isLogin()){
+
+
+
             val intent = Intent(applicationContext, MenuActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)

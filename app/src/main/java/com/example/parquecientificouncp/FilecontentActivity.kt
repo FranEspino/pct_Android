@@ -97,11 +97,8 @@ class FilecontentActivity : AppCompatActivity() {
         val pdfView = findViewById<PDFView>(R.id.pdf_viewer)
 
 
-
-
-
             FileLoader.with(this)
-                .load("http://3.140.135.200:8080/api/file/documents/"+url_file)
+                .load("https://parquecientificouncp.com/archivo/proyecto/"+url_file+".pdf")
                 .fromDirectory("PDFFile", FileLoader.DIR_INTERNAL)
                 .asFile(object : FileRequestListener<File> {
                     override fun onLoad(
@@ -157,7 +154,6 @@ class FilecontentActivity : AppCompatActivity() {
                 response: Response<ResponseBody>
             ) {
                 if(response.body() != null){
-                    Log.d("####TEST COMMENT ####", response.message());
                     Toast.makeText(this@FilecontentActivity, "Comentario registrado", Toast.LENGTH_SHORT).show()
                 }
             }
@@ -185,7 +181,7 @@ class FilecontentActivity : AppCompatActivity() {
                         val nombre =  comentarios[i].nombre+ " " +comentarios[i].apellido
                         val comentario = comentarios[i].comentario
 
-                        var foto = "http://3.140.135.200:8080/images/" + comentarios[i].foto
+                        var foto = "https://parquecientificouncp.com/archivo/usuario/" + comentarios[i].foto
                         if(comentarios[i].foto === null){
                             foto = "https://res.cloudinary.com/frapoteam/image/upload/v1642693382/user_di2fri.png"
                         }

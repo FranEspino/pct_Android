@@ -1,6 +1,7 @@
 package com.example.parquecientificouncp;
 
 import com.example.parquecientificouncp.entities.ResponseUpdatePdf;
+import com.example.parquecientificouncp.entities.UpdateFoto;
 import com.example.parquecientificouncp.models.UpdatePdf;
 
 import okhttp3.ResponseBody;
@@ -24,6 +25,10 @@ public interface Api {
             @Body UpdatePdf updatePdf
     );
 
-
+    @Headers("Content-Type: application/json")
+    @PUT("usuarios/foto")
+    Call<ResponseBody> uploadFoto(
+            @Body UpdateFoto updateFoto
+    );
 
 }

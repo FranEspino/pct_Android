@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -30,6 +31,16 @@ class ProfileActivity : AppCompatActivity() {
         val et_correo =  findViewById<EditText>(R.id.et_correo)
         val et_direccion =  findViewById<EditText>(R.id.et_direccion)
         val btn_insertcite = findViewById<Button>(R.id.btn_insertcite)
+        val btn_changepass = findViewById<Button>(R.id.btn_changepass)
+
+        val changePass = UserContextApplication.context.getChangePass()
+        if(changePass == 0){
+            btn_changepass.visibility =  View.GONE
+        }
+        btn_changepass.setOnClickListener {
+            val intent = Intent(applicationContext, PasswordActivity::class.java)
+            startActivity(intent)
+        }
 
         et_nombre.setText(UserContextApplication.context.getNameUser())
         et_apellido.setText(UserContextApplication.context.getLastNameUser())

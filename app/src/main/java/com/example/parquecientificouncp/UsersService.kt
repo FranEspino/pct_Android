@@ -29,6 +29,12 @@ interface UsersService {
     fun insertCite(@Body cite: Cite): Call<ResponseBody>
 
     @Headers("Content-Type: application/json")
+    @POST("cambiarclave")
+    fun changePass(@Body cite: ChangePass): Call<ResponseBody>
+
+
+
+    @Headers("Content-Type: application/json")
     @PUT("usuarios")
     fun modifyUserInformation(@Body modifyindo: ModifyInfo): Call<ResponseBody>
 

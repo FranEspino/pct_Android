@@ -15,6 +15,7 @@ import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel
 import com.example.parquecientificouncp.*
 import com.example.parquecientificouncp.entities.InvestigacionResponse
+import com.example.parquecientificouncp.models.ChangePass
 import com.squareup.picasso.Picasso
 import retrofit2.Call
 import retrofit2.Callback
@@ -40,19 +41,28 @@ class HomeFragment : Fragment() {
         name_user.setText(UserContextApplication.context.getNameUser() + "\n" +
                           UserContextApplication.context.getLastNameUser())
         val btn_citas: CardView= view.findViewById(R.id.cv_citas)
+       val  cv_proyecto: CardView = view.findViewById(R.id.cv_proyecto)
         val typeuser  = UserContextApplication.context.getTypeUser()
         if(typeuser == "asesor"){
             btn_citas.visibility =  View.GONE
-
+            cv_proyecto.visibility = View.GONE
         }
-
 
         btn_citas.setOnClickListener {
             val intent = Intent(activity, CitasActivity::class.java)
             startActivity(intent)
         }
-        getInfoInvestigation(UserContextApplication.context.getIdRol(),view)
+        if(typeuser == "investigador"){
+            getInfoInvestigation(UserContextApplication.context.getIdRol(),view)
 
+        }
+        val changePass = UserContextApplication.context.getChangePass()
+        if(changePass == 1){
+            Toast.makeText(getActivity(), "Por la seguridad de tu investigación cambia la contraseña de tu cuenta.", Toast.LENGTH_SHORT).show()
+
+            val intent = Intent(getContext(), ProfileActivity::class.java)
+            startActivity(intent)
+        }
 
         val imageList = ArrayList<SlideModel>()
         imageList.add(SlideModel("https://diariocorreo.pe/resizer/82N4hFiR76qA8SuWGiqhmT01ufw=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/UNL76A6GW5HDTFXD4YPY2EGWKU.jpeg", " Licenciada por Sunedu"
@@ -77,9 +87,6 @@ class HomeFragment : Fragment() {
                 call: Call<InvestigacionResponse>,
                 response: Response<InvestigacionResponse>
             ) {
-                Log.d("HHHH",response.body()!!.investigacion.toString())
-
-
                 if( response.body()!!.investigacion.isEmpty()){
                     Toast.makeText(getActivity(),"No tienes una investigacion, consulta al portal!",
                         Toast.LENGTH_LONG).show();
@@ -88,7 +95,6 @@ class HomeFragment : Fragment() {
                     startActivity(intent)
                 }else{
                     if(response.isSuccessful){
-
 
                         val btn_project: CardView= view.findViewById(R.id.cv_proyecto)
                         val typeuser  = UserContextApplication.context.getTypeUser()

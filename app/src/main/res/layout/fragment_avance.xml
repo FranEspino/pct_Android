@@ -53,7 +53,7 @@
                     android:layout_marginTop="80dp"
                     android:paddingLeft="20dp"
 
-                    android:text="Datos de mi asesor "
+                    android:text="Datos de mi asesor: "
                     android:textColor="#19142B"
                     android:textSize="18dp"
                     android:textStyle="bold" />
@@ -104,7 +104,7 @@
                                 android:layout_marginLeft="30dp"
                                 android:fontFamily="@font/sparta_bold"
                                 android:padding="5dp"
-                                android:text="Name Asesor Complete"
+                                android:text="Cargando ..."
                                 android:textColor="#19142B"
                                 android:textSize="13dp" />
 
@@ -115,7 +115,7 @@
                                 android:layout_centerInParent="true"
                                 android:layout_marginLeft="30dp"
                                 android:padding="5dp"
-                                android:text="Correo@outlook.com"
+                                android:text="Cargando ..."
                                 android:textColor="#19142B"
                                 android:textSize="10dp" />
 
@@ -127,7 +127,7 @@
                                 android:layout_marginLeft="30dp"
                                 android:fontFamily="@font/sparta_bold"
                                 android:padding="5dp"
-                                android:text="Ing Informático"
+                                android:text="Cargando ..."
                                 android:textColor="#19142B"
                                 android:textSize="10dp" />
                         </LinearLayout>
@@ -158,7 +158,7 @@
                             android:layout_centerInParent="true"
                             android:padding="5dp"
                             android:textStyle="bold"
-                            android:text="Tu investigación"
+                            android:text="Tu investigación: "
                             android:textColor="#19142B"
                             android:textSize="18dp" />
                     </LinearLayout>
@@ -196,7 +196,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="8dp"
                                 android:layout_marginTop="5dp"
-                                android:text="Titulo Project"
+                                android:text="Cargando ..."
                                 android:textColor="@color/white"
                                 android:textSize="20dp"
                                 android:textStyle="bold" />
@@ -213,9 +213,8 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="8dp"
                                     android:layout_marginTop="5dp"
-
                                     android:layout_marginBottom="10dp"
-                                    android:text="Description of content investigation "
+                                    android:text="Cargando ..."
                                     android:textColor="@color/white"
                                     android:textSize="13dp" />
 
@@ -229,7 +228,7 @@
                                 android:layout_marginLeft="8dp"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginBottom="10dp"
-                                android:text="Fecha de creacion: 12/11/21"
+                                android:text="Fecha de creación: Cargando ..."
                                 android:textColor="@color/white"
                                 android:textSize="13dp"
 
@@ -266,7 +265,7 @@
                                 android:layout_centerInParent="true"
                                 android:textSize="16dp"
                                 android:padding="5dp"
-                                android:text="0%"
+                                android:text="Cargando ..."
                                 android:textColor="#19142B"
                                 />
                         </LinearLayout>
@@ -290,7 +289,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
                                 android:padding="5dp"
-                                android:text="Estado: "
+                                android:text="Estado:"
                                 android:textColor="#19142B"
                                 android:textSize="18dp"
                                 android:textStyle="bold" />
